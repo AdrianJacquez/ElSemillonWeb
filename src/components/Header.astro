@@ -1,0 +1,76 @@
+---
+// <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+//             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+//             <path d="M18 6l-12 12" />
+//             <path d="M6 6l12 12" />
+//           </svg>
+
+
+---
+
+
+<header class="custom-gradient z-40 py-3 px-10  h-20 flex items-center fixed top-0 w-full justify-between text-white">
+    <a href="#Home"><h1 class="inline-block font-semibold text-2xl">El Semillon</h1></a>
+    
+    <!-- Botón de menú hamburguesa (visible solo en pantallas pequeñas) -->
+    <button id="menu-button" class="lg:hidden flex items-center px-3 py-2   focus:outline-none">
+        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 6l16 0" />
+            <path d="M4 12l16 0" />
+            <path d="M4 18l16 0" />
+        </svg>
+        <!-- Ícono de cerrar -->
+        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="hidden icon icon-tabler icon-tabler-x" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M18 6l-12 12" />
+            <path d="M6 6l12 12" />
+        </svg>
+          
+    </button>
+    
+    <!-- Menú de navegación (visible en pantallas grandes) -->
+    <nav class="hidden lg:block w-[80%]">
+        <ul class="flex flex-row justify-between [&>li>a]:font-semibold [&>li>a]:text-xl">
+            <li><a href="#Nosotros">Nosotros</a></li>
+            <li><a href="#">Misión</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Menú hamburguesa desplegable (visible solo en pantallas pequeñas) -->
+    <i   id="mobile-menu" class="lg:hidden absolute top-12 left-0 w-full bg-white text-black border border-gray-200 shadow-md hidden">
+        <ul class="flex flex-col space-y-2 p-4">
+            <li><a href="#Nosotros" class="font-semibold text-xl">Nosotros</a></li>
+            <li><a href="#" class="font-semibold text-xl">Misión</a></li>
+            <li><a href="#" class="font-semibold text-xl">Productos</a></li>
+            <li><a href="#" class="font-semibold text-xl">Contacto</a></li>
+        </ul>
+    </i>
+</header>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuButton = document.getElementById('menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+      
+      menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+    });
+</script>
+
+  
+  
+
+<style>
+    .custom-gradient {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+  </style>
