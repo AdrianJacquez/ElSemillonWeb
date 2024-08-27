@@ -10,7 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.12.2"
+    "astro": "^4.12.2",
+    "lucide-react": "^0.436.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
