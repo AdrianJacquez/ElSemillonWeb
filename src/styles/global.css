@@ -58,3 +58,21 @@ header {
       1px 1px 0 #000;
   }
 }
+
+/* Register your custom font family and tell the browser where to find it. */
+@font-face {
+  .fontCustom {
+    font-family: "DistantGalaxy";
+    src: url("/fonts/DistantGalaxy.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
