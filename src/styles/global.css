@@ -8,6 +8,7 @@ header {
   top: 0;
   left: 0;
   z-index: 50;
+  position: sticky;
   width: 100%; /* Para pantallas pequeñas */
   height: auto;
 }
@@ -25,30 +26,22 @@ header {
 /* Ajustes para pantallas grandes */
 @media (min-width: 1024px) {
   header {
-    height: 100vh; /* Para pantallas grandes */
-    width: 230px; /* Ajusta este valor según el ancho de tu nav */
+    height: 40px; /* Para pantallas grandes */
+    width: 100%; /* Ajusta este valor según el ancho de tu nav */
   }
 
   #Home,
-  #Mision,
   #Nosotros {
-    padding-left: 230px; /* Debe coincidir con el ancho del nav */
     min-height: calc(100vh - 60px); /* Ajusta según el tamaño de tu header */
-    padding-top: 0; /* Remover padding-top en pantallas grandes */
+    padding-top: 60px; /* Remover padding-top en pantallas grandes */
+  }
+  #Mision {
+    min-height: calc(100vh - 60px); /* Ajusta según el tamaño de tu header */
+    padding-top: 0px;
   }
 }
 
 @layer utilities {
-  .text-stroke-1 {
-    -webkit-text-stroke: 1px;
-  }
-  .text-stroke-2 {
-    -webkit-text-stroke: 2px;
-  }
-  .text-stroke-3 {
-    -webkit-text-stroke: 3px;
-  }
-
   .text-shadow {
     text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
       -2px 2px 0 #000;
@@ -56,23 +49,5 @@ header {
   .text-2xl-shadow {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
       1px 1px 0 #000;
-  }
-}
-
-/* Register your custom font family and tell the browser where to find it. */
-@font-face {
-  .fontCustom {
-    font-family: "DistantGalaxy";
-    src: url("/fonts/DistantGalaxy.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #ffffff;
-    color: #000000;
   }
 }
