@@ -2,7 +2,10 @@ import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx,ts,tsx,astro}"],
+  content: [
+    "./src/**/*.{astro,html,js,jsx,ts,tsx,vue}",
+    "./node_modules/flowbite/**/*.js", // Añade esta línea
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -10,5 +13,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("flowbite/plugin"), // Añade esta línea
+  ],
 };
