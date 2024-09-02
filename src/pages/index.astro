@@ -2,20 +2,23 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from "../components/Nav.astro"
 import "../styles/global.css";
-import Nosotros from '../components/Nosotros.astro';
+import Semillas from '../components/Semillas.astro';
 import Home from '../components/Home.astro';
-import Mision from '../components/Mision.astro';
+import Maquila from '../components/Maquila.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="EL SEMILLON">
 	<Nav/>
-	<main class=" snap-y snap-mandatory relative w-full h-screen overflow-auto">
+	<main class="relative w-full h-screen overflow-auto">
 		<div class="snap-center"><Home/></div>
 		
-		<div class="snap-center"><Nosotros/></div>
-
-		<div class="snap-center"><Mision/></div>
+		<div class="snap-center"><Maquila/></div>
 		
+		<div class="snap-center"><Semillas/></div>
+
+		<div class="snap-center"><Footer/></div>
+
 	</main>
 </Layout>
 

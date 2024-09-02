@@ -4,7 +4,7 @@
     </a>
 
     <!-- Botón de menú hamburguesa (visible solo en pantallas pequeñas) -->
-    <button id="menu-button" aria-label="menu" class="lg:hidden flex items-center p-2 focus:outline-none">
+    <div id="menu-button" aria-label="menu" class="burger relative w-8 h-6 lg:hidden flex items-center  focus:outline-none">
         <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="#064E3B" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M4 6l16 0" />
@@ -17,14 +17,14 @@
             <path d="M18 6l-12 12" />
             <path d="M6 6l12 12" />
         </svg>
-    </button>
+        
+    </div>
 
     <!-- Menú de navegación (visible en pantallas grandes) -->
     <nav class="hidden lg:flex h-full flex-grow items-center">
         <ul class="flex justify-around w-full">
-            <li><a class="font-medium text-xl hover:text-green-700 hover:scale-105 transition-transform duration-300" href="#Nosotros">Nosotros</a></li>
-            <li><a class="font-medium text-xl hover:text-green-700 hover:scale-105 transition-transform duration-300" href="#Mision">Misión</a></li>
-            <li><a class="font-medium text-xl hover:text-green-700 hover:scale-105 transition-transform duration-300" href="#">Productos</a></li>
+            <li><a class="font-medium text-xl hover:text-green-700 hover:scale-105 transition-transform duration-300" href="#Maquila">Maquila</a></li>
+            <li><a class="font-medium text-xl hover:text-green-700 hover:scale-105 transition-transform duration-300" href="#Semillas">Semillas</a></li>
             <li><a class="font-medium text-xl hover:text-green-700 hover:scale-105 transition-transform duration-300" href="#">Contacto</a></li>
         </ul>
     </nav>
@@ -32,13 +32,16 @@
     <!-- Menú hamburguesa desplegable (visible solo en pantallas pequeñas) -->
     <div id="mobile-menu" class="lg:hidden absolute  left-0 w-full bg-white text-green-900 hidden transition-all duration-500" style="top:98%;">
         <ul class="flex flex-col space-y-2 p-4">
-            <li><a href="#Nosotros" class="font-bold text-xl hover:text-green-600 transition-colors duration-300">Nosotros</a></li>
-            <li><a href="#Mision" class="font-bold text-xl hover:text-green-600 transition-colors duration-300">Misión</a></li>
-            <li><a href="#" class="font-bold text-xl hover:text-green-600 transition-colors duration-300">Productos</a></li>
+            <li><a href="#Maquila" class="font-bold text-xl hover:text-green-600 transition-colors duration-300">Maquila</a></li>
+            <li><a href="#Semillas" class="font-bold text-xl hover:text-green-600 transition-colors duration-300">Semillas</a></li>
             <li><a href="#" class="font-bold text-xl hover:text-green-600 transition-colors duration-300">Contacto</a></li>
         </ul>
     </div>
 </header>
+
+
+
+
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -80,3 +83,5 @@
 
     });
 </script>
+    
+    

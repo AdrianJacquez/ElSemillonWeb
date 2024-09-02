@@ -14,13 +14,19 @@ header {
 }
 
 /* Ajustes para las secciones en pantallas pequeñas */
-#Home,
-#Mision,
-#Nosotros {
+#Home {
   z-index: 10;
   position: relative;
   padding-left: 0;
   padding-top: 60px; /* Ajusta este valor según la altura de tu header */
+}
+
+#Maquila,
+#Semillas {
+  z-index: 10;
+  position: relative;
+  padding-left: 0;
+  padding-top: 6cqi; /* Ajusta este valor según la altura de tu header */
 }
 
 /* Ajustes para pantallas grandes */
@@ -31,11 +37,11 @@ header {
   }
 
   #Home,
-  #Nosotros {
+  #Semillas {
     min-height: calc(100vh - 60px); /* Ajusta según el tamaño de tu header */
     padding-top: 60px; /* Remover padding-top en pantallas grandes */
   }
-  #Mision {
+  #Maquila {
     min-height: calc(100vh - 60px); /* Ajusta según el tamaño de tu header */
     padding-top: 0px;
   }
