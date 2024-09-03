@@ -93,7 +93,7 @@ const Formulario = () => {
             maxlength="100"
             className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-green-500"
             placeholder="correo@email.com"
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
           />
         </div>
 
