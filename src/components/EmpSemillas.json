@@ -4,43 +4,36 @@
     "imagen": "/images/Harris.webp",
     "descripcion": "Semillas Harris Moran de alta calidad"
   },
-
   {
     "nombre": "CapGen",
     "imagen": "/images/CapGen.webp",
-    "descripcion": "Exelentes semillas de CapGen"
+    "descripcion": "Excelentes semillas de CapGen"
   },
-
   {
     "nombre": "United Genetics",
     "imagen": "/images/UG.webp",
     "descripcion": "Lo mejor de United Genetics"
   },
-
   {
     "nombre": "GerSeed",
     "imagen": "/images/GerSeed.webp",
     "descripcion": "Calidad de GerSeed"
   },
-
   {
     "nombre": "RustikaSeed",
     "imagen": "/images/RustikaLogo.webp",
     "descripcion": "Semillas de Rustika Seed"
   },
-
   {
     "nombre": "Syngenta",
     "imagen": "/images/Syngenta.webp",
-    "descripcion": "Distinsion de semillas con Syngenta"
+    "descripcion": "Distinción de semillas con Syngenta"
   },
-
   {
     "nombre": "Rijk Zwaan",
     "imagen": "/images/RijkZwaan.webp",
-    "descripcion": "Semilla de Prestigio"
+    "descripcion": "Semilla de prestigio"
   },
-
   {
     "nombre": "Seminis",
     "imagen": "/images/Seminis.webp",
