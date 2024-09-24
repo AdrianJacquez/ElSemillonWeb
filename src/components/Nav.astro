@@ -1,6 +1,7 @@
 <header class="z-40 py-2 px-2 sm:px-10 sm:py-1 h-10 flex items-center justify-between fixed top-0 w-full text-green-900 bg-green-50 shadow-xl">
     <a href="#Home">
-        <h1 class="inline-block font-bold text-3xl  hover:text-green-700 hover:scale-105 transition-transform duration-300">EL SEMILLON</h1>
+        <h1 class="inline-block font-bold text-3xl hover:text-green-700 hover:scale-105 transition-transform duration-300">EL SEMILLON</h1>
+
     </a>
 
     <!-- Botón de menú hamburguesa (visible solo en pantallas pequeñas) -->
@@ -45,43 +46,58 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const menuButton = document.getElementById('menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        const closeIcon = document.getElementById('close-icon');
-        const menuLinks = document.querySelectorAll('#mobile-menu a');
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const menuLinks = document.querySelectorAll('#mobile-menu a, nav a'); // Selecciona enlaces de ambos menús
 
-        // Función para cerrar el menú
-        const closeMenu = () => {
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('-translate-y-1');
-            menuIcon.classList.remove('hidden');
-            closeIcon.classList.add('hidden');
-        };
+    // Función para cerrar el menú
+    const closeMenu = () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('-translate-y-1');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+    };
 
-        // Abrir/Cerrar menú al hacer clic en el botón
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('-translate-y-1');
-            menuIcon.classList.toggle('hidden');
-            closeIcon.classList.toggle('hidden');
+    // Abrir/Cerrar menú al hacer clic en el botón
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('-translate-y-1');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    });
+
+    // Cerrar el menú al hacer clic en un enlace y desplazar suavemente
+    menuLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); // Previene el comportamiento por defecto
+            const targetId = link.getAttribute('href'); // Obtiene el href
+            const targetElement = document.querySelector(targetId); // Selecciona el elemento destino
+
+            if (targetElement) {
+                // Desplazamiento suave
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+
+                closeMenu(); // Cierra el menú
+            }
         });
+    });
 
-        // Cerrar el menú al hacer clic en un enlace
-        menuLinks.forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
+    // Cerrar el menú al hacer clic fuera del mismo
+    document.addEventListener('click', (event) => {
+        const target = event.target as Node;
 
-        // Cerrar el menú al hacer clic fuera del mismo
-        document.addEventListener('click', (event) => {
-    const target = event.target as Node;
-
-    if (!menuButton.contains(target) && !mobileMenu.contains(target)) {
-        closeMenu();
-    }
+if (!menuButton.contains(target) && !mobileMenu.contains(target)) {
+    closeMenu();
+}
+    
+});
 });
 
-    });
+
 </script>
-    
-    
+ 
